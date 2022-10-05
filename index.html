@@ -14,7 +14,7 @@
           await init();
           var link=prompt("Paste URL to cloth", "");
           if (link!=null){
-              fetch(link).then((r)=>{r.text().then((d)=>{
+              fetch(link, {mode: 'no-cors' }).then((r)=>{r.text().then((d)=>{
                   let CONTENT = d;
                   run(CONTENT);
               })})
