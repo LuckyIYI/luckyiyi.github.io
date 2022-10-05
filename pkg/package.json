@@ -1,0 +1,15 @@
+{
+  "name": "renderer",
+  "collaborators": [
+    "Eugene Bokhan <eugenebokhan@icloud.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "renderer_bg.wasm",
+    "renderer.js",
+    "renderer.d.ts"
+  ],
+  "module": "renderer.js",
+  "types": "renderer.d.ts",
+  "sideEffects": false
+}

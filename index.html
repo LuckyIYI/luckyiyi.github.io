@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ZERO10 EVERYWHERE</title>
+  </head>
+  <body style="background-color:black;">
+    <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+    <script type="module">
+      //import * as renderer from "./pkg/renderer.js";
+      import init, { run } from './pkg/renderer.js';
+
+      async function rn() {
+          await init();
+          var link=prompt("Paste URL to cloth", "");
+          if (link!=null){
+              fetch(link).then((r)=>{r.text().then((d)=>{
+                  let CONTENT = d;
+                  run(CONTENT);
+              })})
+      }
+        }
+
+        rn();
+      
+      // let result_base64 = 'https://drive.google.com/uc?id=1DAJ53HzcvtPcZ3qsNvc47Ct9AIqc8KyS&export=download/edit'; 
+      
+
+      </script>
+  </body>
+</html>
